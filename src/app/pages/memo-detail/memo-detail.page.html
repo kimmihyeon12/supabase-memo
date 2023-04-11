@@ -1,0 +1,13 @@
+<div class="w-full h-screen flex justify-center items-center">
+  <div class="w-1/5 h-1/2 rounded-xl shadow-md text-center px-4">
+    <div class="h-[460px]" [formGroup]="memoForm!">
+      <p class="text-xl font-bold  pt-4">할일을 입력해보세요!</p>
+      <input class="my-4 input input-bordered w-full" formControlName="title" placeholder="제목" />
+      <textarea class="textarea textarea-bordered w-full h-[300px]" formControlName="content"
+        placeholder="내용"></textarea>
+    </div>
+    <button class="btn w-full" (click)="this.memoForm?.value.title ===''?  onCreateMemo():onUpdateMemo()">
+      {{this.memoForm?.value.title ===''? '추가하기':'수정하기'}}
+    </button>
+  </div>
+</div>

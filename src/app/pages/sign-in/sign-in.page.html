@@ -1,0 +1,12 @@
+<div class="w-full h-screen flex justify-center items-center">
+  <div class="w-1/5 h-1/2 rounded-xl shadow-md text-center px-4">
+    <div class="h-[460px]" [formGroup]="signupForm!">
+      <p class="text-xl font-bold  pt-4">회원가입을 해보세요!</p>
+      <input type="email" formControlName="email" placeholder="이메일" required class="my-2 input input-bordered w-full">
+      <input type="password" formControlName="password" placeholder="비밀번호" required
+        class="my-2 input input-bordered w-full">
+      <input type="text" formControlName="name" placeholder="이름" required class="my-2 input input-bordered w-full">
+    </div>
+    <button class="btn w-full" (click)="register()">회원가입하기</button>
+  </div>
+</div>
